@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "hexashop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap": "5.2.3",
-    "csbbust": "1.0.1",
-    "net": "^1.0.2",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-bootstrap": "2.8.0",
-    "react-dom": "18.2.0",
-    "tls": "^0.0.1"
+    "bootstrap": "^5.3.2",
+    "buffer": "^6.0.3",
+    "graceful-fs": "^4.2.11",
+    "next": "latest",
+    "react": "latest",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "latest",
+    "stream-browserify": "^3.0.0",
+    "url": "^0.11.3"
   },
   "devDependencies": {
-    "@gradio/client": "^0.3.1",
-    "node-polyfill-webpack-plugin": "^2.0.1",
-    "webpack-node-externals": "^3.0.0"
-  }
+    "@gradio/client": "^0.4.2",
+    "eslint": "latest",
+    "eslint-config-next": "latest"
+  },
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ]
 }

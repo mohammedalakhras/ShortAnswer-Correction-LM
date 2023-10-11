@@ -42,8 +42,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: var(--max-width);
-  width: 100%;
+  max-width: 100%;
+  width: var(--max-width);
 }
 
 .card {
@@ -226,4 +226,7 @@
   to {
     transform: rotate(0deg);
   }
+}
+.img:hover {
+  cursor:pointer ;
 }

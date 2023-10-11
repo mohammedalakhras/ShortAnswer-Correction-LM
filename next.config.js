@@ -1,10 +1,7 @@
-/** @type {import('next').NextConfig} */
+const {webpack} = require("next/dist/compiled/webpack/webpack");
 
-
-const {webpack} = require ("next/dist/compiled/webpack/webpack");
 /** @type {import ('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   webpack: (config, {isServer}) => {
     if (!isServer) {
       config.resolve = {
@@ -21,11 +18,11 @@ const nextConfig = {
         }
       };
     }
-    config.plugins.push (new webpack.NormalModuleReplacementPlugin (/node:/, (resource) => {
-      resource.request = resource.request.replace (/^node:/, "");
+    config.plugins.push(new webpack.NormalModuleReplacementPlugin(/node:/, (resource) => {
+      resource.request = resource.request.replace(/^node:/, "");
     }))
-    return config
+    return config;
   },
-  experimental: {appDir: true}
 };
+
 module.exports = nextConfig;
